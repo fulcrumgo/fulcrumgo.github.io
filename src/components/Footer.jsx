@@ -148,13 +148,13 @@ export default function Footer() {
         </div>
 
         {/* Brand line, echoing the current site's closing statement */}
-        <div className="flex flex-col gap-6 border-t border-white/10 pt-10 md:flex-row md:items-end md:justify-between">
-          <p className="brand-glow font-display text-[2.5rem] font-semibold leading-[0.95] tracking-tight md:text-[4rem]">
-            A place to learn.
-            <br />
-            A chance to grow.
+        <div className="border-t border-white/10 pt-10">
+          {/* One line at every width. The size is fluid rather than stepped
+              so the sentence always fills the column without wrapping. */}
+          <p className="brand-line font-display font-semibold tracking-tight">
+            A place to learn. A chance to grow.
           </p>
-          <p className="text-xs text-paper/60">
+          <p className="mt-8 text-xs text-paper/60">
             © {new Date().getFullYear()} {org.name}. All rights reserved.
           </p>
         </div>

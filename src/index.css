@@ -262,34 +262,66 @@
     opacity: 1 !important;
   }
 
-  .brand-glow {
+  /* Hold the gradient still, mid sweep, so it stays legible. */
+  .brand-line {
     animation: none !important;
-    color: rgba(255, 255, 255, 0.18) !important;
-    text-shadow: none !important;
+    background-position: 50% 0 !important;
+    filter: none !important;
   }
 }
 
 /* ------------------------------------------------------------------
-   Footer brand line. Breathes very slowly between a dim white and a
-   brighter one, with a soft bloom at the peak. Slow and low contrast
-   on purpose: it should register as the page being alive, not as a
-   flashing element competing with the links above it.
+   Footer brand line.
+
+   One line, sized in vw so it fills the column at any width without
+   wrapping. A narrow bright band sits inside a grey field; sweeping the
+   background position drags that band across the letters, which reads as
+   light travelling over the text rather than the whole line pulsing.
+   The grey stops are #6f6f6f, which clears 4.5:1 on the ink background,
+   so the sentence stays readable at every point in the cycle.
    ------------------------------------------------------------------ */
-.brand-glow {
-  color: rgba(255, 255, 255, 0.1);
-  animation: brand-breathe 7s ease-in-out infinite;
-  will-change: color, text-shadow;
+.brand-line {
+  font-size: clamp(0.95rem, 5.1vw, 4.9rem);
+  line-height: 1.1;
+  white-space: nowrap;
+  background: linear-gradient(
+    100deg,
+    #6f6f6f 0%,
+    #6f6f6f 38%,
+    #d8d8d8 46%,
+    #ffffff 50%,
+    #d8d8d8 54%,
+    #6f6f6f 62%,
+    #6f6f6f 100%
+  );
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  /* text-shadow cannot render through background-clip: text, so the bloom
+     is a drop-shadow on the element, timed to the same 6s cycle. */
+  animation: brand-flow 6s linear infinite,
+    brand-bloom 6s ease-in-out infinite;
+  will-change: background-position, filter;
 }
 
-@keyframes brand-breathe {
+@keyframes brand-flow {
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -150% 0;
+  }
+}
+
+@keyframes brand-bloom {
   0%,
   100% {
-    color: rgba(255, 255, 255, 0.09);
-    text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
   }
   50% {
-    color: rgba(255, 255, 255, 0.32);
-    text-shadow: 0 0 26px rgba(255, 255, 255, 0.22);
+    filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.28));
   }
 }
 
