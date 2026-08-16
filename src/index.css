@@ -274,42 +274,42 @@
    Footer brand line.
 
    One line, sized in vw so it fills the column at any width without
-   wrapping. A narrow bright band sits inside a grey field; sweeping the
-   background position drags that band across the letters, which reads as
-   light travelling over the text rather than the whole line pulsing.
-   The grey stops are #6f6f6f, which clears 4.5:1 on the ink background,
-   so the sentence stays readable at every point in the cycle.
+   wrapping.
+
+   The gradient tile is 1.5x the box width and the sweep runs 200% to -100%.
+   That matters: with background-position percentages the offset is
+   P/100 x (box - image), so this shifts by exactly one whole tile and the
+   loop is seamless. The earlier pairing shifted 1.5 tiles, so every second
+   cycle began from a different phase and the glow appeared to change speed.
+   The smaller tile also shortens the grey gap between passes.
+
+   Only background-position animates. An animated drop-shadow was also
+   running on a different easing curve, which fought the constant-speed
+   sweep and forced the blurred text to re-rasterise every frame.
+
+   The darkest stop is #6f6f6f, above 4.5:1 on the ink background, so the
+   sentence stays readable throughout.
    ------------------------------------------------------------------ */
 .brand-line {
   font-size: clamp(0.95rem, 5.1vw, 4.9rem);
   line-height: 1.1;
   white-space: nowrap;
-  /* A wide, soft bright band inside a grey field. Sweeping the background
-     position drags it across the letters. The band is deliberately broad so
-     several words light at once, and the sweep runs past both ends so the
-     first and last words are covered too. */
   background: linear-gradient(
     100deg,
     #6f6f6f 0%,
-    #6f6f6f 16%,
-    #a8a8a8 30%,
-    #e8e8e8 41%,
+    #8a8a8a 12%,
+    #c9c9c9 30%,
     #ffffff 50%,
-    #e8e8e8 59%,
-    #a8a8a8 70%,
-    #6f6f6f 84%,
+    #c9c9c9 70%,
+    #8a8a8a 88%,
     #6f6f6f 100%
   );
-  background-size: 200% 100%;
+  background-size: 150% 100%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-
-  /* text-shadow cannot render through background-clip: text, so the bloom
-     is a drop-shadow on the element, timed to the same 6s cycle. */
-  animation: brand-flow 9s linear infinite,
-    brand-bloom 9s ease-in-out infinite;
-  will-change: background-position, filter;
+  animation: brand-flow 9s linear infinite;
+  will-change: background-position;
 }
 
 @keyframes brand-flow {
@@ -318,16 +318,6 @@
   }
   to {
     background-position: -100% 0;
-  }
-}
-
-@keyframes brand-bloom {
-  0%,
-  100% {
-    filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
-  }
-  50% {
-    filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.28));
   }
 }
 
