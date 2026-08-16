@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "ai-for-everyone",
+    "title": "AI for Everyone",
+    "subtitle": "No maths, no code, no jargon. What AI actually is, what it can and cannot do, and how to use it well. Written for students, teachers, and anyone who keeps hearing about it.",
+    "file": "materials/ai-for-everyone.pdf",
+    "slides": 15,
+    "sizeKb": 435
+  },
+  {
+    "slug": "computer-vision-foundations",
+    "title": "Computer Vision: Foundations",
+    "subtitle": "How a machine gets from a grid of numbers to something worth calling perception. Written for people meeting the field for the first time.",
+    "file": "materials/computer-vision-foundations.pdf",
+    "slides": 17,
+    "sizeKb": 514
+  },
+  {
+    "slug": "computer-vision-advanced",
+    "title": "Computer Vision: Advanced",
+    "subtitle": "Detection, segmentation, transformers, generative models and video: the architectures behind modern vision systems, and where each one breaks.",
+    "file": "materials/computer-vision-advanced.pdf",
+    "slides": 16,
+    "sizeKb": 458
+  },
+  {
+    "slug": "machine-learning-foundations",
+    "title": "Machine Learning: Foundations",
+    "subtitle": "What it means for a machine to learn from data, the handful of ideas that recur everywhere, and how to tell a real result from a flattering one.",
+    "file": "materials/machine-learning-foundations.pdf",
+    "slides": 14,
+    "sizeKb": 433
+  },
+  {
+    "slug": "deep-learning",
+    "title": "Deep Learning",
+    "subtitle": "Neural networks from the single neuron up: backpropagation, what depth buys you, and the practical knowledge that decides whether a model trains at all.",
+    "file": "materials/deep-learning.pdf",
+    "slides": 13,
+    "sizeKb": 426
+  },
+  {
+    "slug": "transformers-and-attention",
+    "title": "Transformers and Attention",
+    "subtitle": "How attention works, why it replaced recurrence, and and what actually happens inside a large language model, without the mystique.",
+    "file": "materials/transformers-and-attention.pdf",
+    "slides": 16,
+    "sizeKb": 497
+  },
+  {
+    "slug": "ai-for-experts",
+    "title": "AI for Experts",
+    "subtitle": "For people who already build models: scaling behaviour, training at the frontier, evaluation that survives scrutiny, alignment, and the open problems worth your time.",
+    "file": "materials/ai-for-experts.pdf",
+    "slides": 15,
+    "sizeKb": 440
+  }
+]

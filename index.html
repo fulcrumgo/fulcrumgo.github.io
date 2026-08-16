@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <link rel="apple-touch-icon" href="/images/logo.png" />
+    <meta name="theme-color" content="#0A0A0A" />
+
+    <!--
+      Marks the document as JS-capable BEFORE first paint. Scroll reveals and
+      the hero stagger only hide their content when this class is present, so
+      the prerendered HTML that crawlers read is fully visible, and a reader
+      with JS disabled gets the whole page rather than a blank one.
+    -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--
+      Per-page title, description, canonical, Open Graph and JSON-LD are
+      injected here at build time by scripts/prerender.mjs, from src/data/seo.js.
+      The defaults below only apply to the dev server.
+    -->
+    <!--seo-->
+    <title>Fulcrum, Free AI Mentorship for Under-Resourced Regions</title>
+  </head>
+  <body>
+    <div id="root"><!--app--></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
