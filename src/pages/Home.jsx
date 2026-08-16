@@ -22,6 +22,7 @@ import {
   founder,
   seminars,
   impactPhotos,
+  visionCredit,
   involvement,
 } from "../data/site";
 
@@ -379,6 +380,10 @@ function FounderNote() {
               </p>
               <p className="mt-1 text-sm text-ink-faint">
                 {founder.affiliations.join(" · ")}
+              </p>
+              {/* The opening line of the quote paraphrases I. J. Good. */}
+              <p className="mt-5 text-sm text-ink-faint">
+                {visionCredit.short}
               </p>
               <div className="mt-7">
                 <CapsLink to="/about">Read our story</CapsLink>

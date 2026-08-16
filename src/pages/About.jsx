@@ -8,7 +8,7 @@ import {
   Button,
   CapsLink,
 } from "../components/ui";
-import { org, founder, pillars, contact } from "../data/site";
+import { org, founder, pillars, contact, visionCredit } from "../data/site";
 
 const principles = [
   {
@@ -48,6 +48,10 @@ export default function About() {
                 Computer intelligence is the only invention mankind will ever
                 need to build.
               </h2>
+              {/* The thought is Good's, not ours. Credited where it is used. */}
+              <p className="mt-6 border-t border-line pt-5 text-sm leading-relaxed text-ink-faint">
+                {visionCredit.long}
+              </p>
             </Reveal>
             <Reveal delay={0.08} className="md:col-span-7">
               <div className="prose-fulcrum md:pt-14">

@@ -349,6 +349,17 @@ export const speakers = [
    Founder. Facts below are drawn from the public Google Scholar profile
    and personal site.
    -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   The vision line paraphrases I. J. Good's 1965 argument, so it is credited
+   wherever it appears. Good wrote that the first ultraintelligent machine
+   would be "the last invention that man need ever make", in "Speculations
+   Concerning the First Ultraintelligent Machine".
+   -------------------------------------------------------------------------- */
+export const visionCredit = {
+  short: "Idea after I. J. Good, 1965.",
+  long: 'An idea from the scientist I. J. Good, 1965, who argued the first ultraintelligent machine would be "the last invention that man need ever make".',
+};
+
 /* The founder's own profiles. Defined above `founder` so the ordered
    `profiles` list below can reference them without repeating URLs. */
 const founderLinks = {
