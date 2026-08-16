@@ -32,20 +32,12 @@
     "sizeKb": 434
   },
   {
-    "slug": "deep-learning",
-    "title": "Deep Learning",
-    "subtitle": "Neural networks from the single neuron up: backpropagation, what depth buys you, and the practical knowledge that decides whether a model trains at all.",
-    "file": "materials/deep-learning.pdf",
-    "slides": 13,
-    "sizeKb": 427
-  },
-  {
-    "slug": "transformers-and-attention",
-    "title": "Transformers and Attention",
-    "subtitle": "How attention works, why it replaced recurrence, and and what actually happens inside a large language model, without the mystique.",
-    "file": "materials/transformers-and-attention.pdf",
-    "slides": 16,
-    "sizeKb": 497
+    "slug": "deep-learning-foundations",
+    "title": "Deep Learning: Foundations",
+    "subtitle": "Neural networks from the single neuron up to the transformer: backpropagation, what depth actually buys you, how attention replaced recurrence, and what happens inside a large language model.",
+    "file": "materials/deep-learning-foundations.pdf",
+    "slides": 26,
+    "sizeKb": 582
   },
   {
     "slug": "ai-in-medicine",

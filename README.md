@@ -88,8 +88,7 @@ released under CC BY 4.0:
 | Computer Vision: Foundations | 17 | First encounter with the field |
 | Computer Vision: Advanced | 16 | Detection, segmentation, ViTs, diffusion, video |
 | Machine Learning: Foundations | 14 | The ideas that recur everywhere |
-| Deep Learning | 13 | Neural networks from the single neuron up |
-| Transformers and Attention | 16 | Attention, and what an LLM is really doing |
+| Deep Learning: Foundations | 26 | Neurons to transformers, and what an LLM really does |
 | AI for Experts | 15 | Scaling, evaluation, alignment, open problems |
 
 Every deck opens with an "About Fulcrum" slide and closes with one, both
