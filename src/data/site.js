@@ -331,6 +331,8 @@ export const speakers = [
     name: "Anuj Nepal",
     role: "Deakin Cyber Research & Innovation Centre",
     org: "Deakin University, Australia",
+    // Wording supplied verbatim by the speaker.
+    topics: "Cybersecurity Secure, Data Provenance, IOT, Quantum Cryptography",
     scholar: "https://scholar.google.com/citations?user=BQGqr0oAAAAJ&hl=en",
   },
   {
