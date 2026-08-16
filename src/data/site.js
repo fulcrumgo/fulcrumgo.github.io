@@ -542,6 +542,86 @@ export const seminarDecks = [
   },
 ];
 
+/* --------------------------------------------------------------------------
+   Suggested reading order for the materials.
+
+   The order is not arbitrary. Two decks state their own prerequisites:
+   Computer Vision: Advanced assumes the Foundations deck, and AI for Experts
+   assumes backpropagation and transformers. The rest is sequenced from least
+   to most background required.
+
+   `slug` matches either a course deck in decks.json or a seminar deck below,
+   so the Resources page can resolve the file without repeating any paths.
+   -------------------------------------------------------------------------- */
+export const learningPath = {
+  intro:
+    "Nine documents is a lot to land on at once, and a few of them assume things the others teach. This is the order we would read them in. Nothing here is compulsory, and if you already know a stage, skip it.",
+  upcoming:
+    "We add to this page as we write. Articles and further notes are on the way, so it is worth checking back or asking on Discord what is coming next.",
+  stages: [
+    {
+      label: "Start here",
+      note: "No maths, no code, no background assumed.",
+      items: [
+        {
+          slug: "ai-for-everyone",
+          why: "What AI actually is, what it can and cannot do, and how to study with it without letting it do the studying.",
+        },
+        {
+          slug: "ai-basics-day-1",
+          why: "The seminar version of the same ground, plus how models learn and how images become numbers.",
+        },
+        {
+          slug: "ai-basics-day-2",
+          why: "Where AI is applied, what the jobs actually involve, and how research gets done.",
+        },
+      ],
+    },
+    {
+      label: "The core ideas",
+      note: "Everything after this leans on these two. Read them in order.",
+      items: [
+        {
+          slug: "machine-learning-foundations",
+          why: "Model, loss, optimiser, and how to tell a real result from a flattering one. The vocabulary the rest of the field assumes.",
+        },
+        {
+          slug: "deep-learning-foundations",
+          why: "Neurons to backpropagation to attention to language models. The longest core deck, and the one that unlocks the specialised ones.",
+        },
+      ],
+    },
+    {
+      label: "Pick a direction",
+      note: "Both branches stand on their own. Take whichever matches what you want to build.",
+      items: [
+        {
+          slug: "computer-vision-foundations",
+          why: "How a machine gets from a grid of numbers to something worth calling perception.",
+        },
+        {
+          slug: "computer-vision-advanced",
+          why: "Detection, segmentation, vision transformers, diffusion and video. This one says outright that it assumes the Foundations deck.",
+        },
+        {
+          slug: "ai-in-medicine",
+          why: "Every specialty, what has actually been built, and where it fails. Clinicians can come straight here after Start here, without the two core decks.",
+        },
+      ],
+    },
+    {
+      label: "The frontier",
+      note: "For people already building models.",
+      items: [
+        {
+          slug: "ai-for-experts",
+          why: "Scaling behaviour, evaluation that survives scrutiny, alignment, and the open problems worth your time. Assumes backpropagation and transformers.",
+        },
+      ],
+    },
+  ],
+};
+
 export const nav = [
   { label: "About", to: "/about" },
   { label: "Programs", to: "/programs" },

@@ -97,6 +97,13 @@ slide.
 
 **Seminar slides**, the AI Basics Day 1 and Day 2 decks, as delivered.
 
+A suggested reading order runs at the top of `/resources`, since two decks
+state their own prerequisites (Computer Vision: Advanced assumes the
+Foundations deck, AI for Experts assumes backpropagation and transformers).
+It lives in `learningPath` in `src/data/site.js` and refers to decks by slug,
+resolving titles and file paths from the manifest, so a renamed deck cannot
+leave a dead link. Add a new deck to a stage there when you publish one.
+
 ### Editing the course notes
 
 Content lives in `scripts/deck-content.mjs` as plain data, no layout code.

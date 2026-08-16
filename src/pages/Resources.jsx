@@ -10,7 +10,7 @@ import {
   Button,
 } from "../components/ui";
 import { asset } from "../lib/asset";
-import { seminarDecks, seminars, contact, org } from "../data/site";
+import { seminarDecks, seminars, contact, org, learningPath } from "../data/site";
 import courseDecks from "../data/decks.json";
 
 /**
@@ -120,6 +120,94 @@ function DeckCard({ title, subtitle, file, meta, context }) {
   );
 }
 
+
+/**
+ * Suggested reading order.
+ *
+ * Titles and file paths are resolved from the deck manifest rather than
+ * repeated here, so a renamed deck cannot leave this list pointing at
+ * nothing. Anything unresolved is dropped instead of rendering a dead link.
+ */
+function ReadingOrder() {
+  const bySlug = Object.fromEntries(
+    [...courseDecks, ...seminarDecks].map((d) => [d.slug, d])
+  );
+  let step = 0;
+
+  return (
+    <Section tone="warm">
+      <Container>
+        <Reveal>
+          <SectionHead
+            eyebrow="Where to start"
+            title="If you are not sure which to read first."
+            lede={learningPath.intro}
+          />
+        </Reveal>
+
+        <div className="mt-16 space-y-12">
+          {learningPath.stages.map((stage, si) => (
+            <Reveal key={stage.label} delay={Math.min(si * 0.06, 0.2)}>
+              <div className="grid gap-6 md:grid-cols-12 md:gap-10">
+                <div className="md:col-span-4">
+                  <h3 className="font-display text-xl font-semibold">
+                    {stage.label}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-faint">
+                    {stage.note}
+                  </p>
+                </div>
+
+                <ol className="md:col-span-8">
+                  {stage.items.map((item) => {
+                    const deck = bySlug[item.slug];
+                    if (!deck) return null;
+                    step += 1;
+                    return (
+                      <li
+                        key={item.slug}
+                        className="flex gap-5 border-t border-line py-5"
+                      >
+                        <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center border border-ink font-display text-xs font-semibold">
+                          {step}
+                        </span>
+                        <div>
+                          <a
+                            href={asset(deck.file)}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            className="font-display font-semibold transition-colors hover:text-accent"
+                          >
+                            {deck.title}
+                          </a>
+                          {deck.slides && (
+                            <span className="ml-2 text-xs text-ink-faint">
+                              {deck.slides} slides
+                            </span>
+                          )}
+                          <p className="mt-1.5 text-[0.95rem] leading-relaxed text-ink-soft">
+                            {item.why}
+                          </p>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ol>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal>
+          <p className="mt-14 border-t border-line pt-8 text-[0.95rem] leading-relaxed text-ink-soft">
+            {learningPath.upcoming}
+          </p>
+        </Reveal>
+      </Container>
+    </Section>
+  );
+}
+
 export default function Resources() {
   return (
     <>
@@ -128,6 +216,8 @@ export default function Resources() {
         title="Everything we teach, free to download."
         lede="Course notes written for Fulcrum, plus the slides from sessions we have delivered. Open any of them in your browser or save the PDF. No sign-up, no email wall, take them and use them."
       />
+
+      <ReadingOrder />
 
       {/* Course notes */}
       <Section tone="paper">
