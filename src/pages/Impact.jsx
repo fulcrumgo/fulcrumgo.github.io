@@ -282,11 +282,34 @@ function Collaborators() {
             <p className="text-sm uppercase tracking-[0.18em] text-ink-faint">
               Guest speakers
             </p>
-            <div className="mt-6 grid gap-x-16 gap-y-6 sm:grid-cols-2">
+            <div className="mt-6 grid gap-x-16 gap-y-8 sm:grid-cols-2">
               {speakers.map((s) => (
                 <div key={s.name} className="border-t border-line pt-5">
-                  <p className="font-semibold">{s.name}</p>
-                  <p className="mt-1 text-sm text-ink-soft">{s.topics}</p>
+                  <p className="font-display text-lg font-semibold">{s.name}</p>
+                  {s.role && (
+                    <p className="mt-1.5 text-sm leading-snug text-ink-soft">
+                      {s.role}
+                    </p>
+                  )}
+                  {s.org && (
+                    <p className="text-sm text-ink-faint">{s.org}</p>
+                  )}
+                  {s.topics && (
+                    <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+                      {s.topics}
+                    </p>
+                  )}
+                  {s.scholar && (
+                    <a
+                      href={s.scholar}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="mt-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-ink transition-colors hover:text-accent"
+                    >
+                      Google Scholar
+                      <ExternalLink className="h-3.5 w-3.5" strokeWidth={2} />
+                    </a>
+                  )}
                 </div>
               ))}
             </div>

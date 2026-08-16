@@ -324,15 +324,21 @@ export const collaborators = [
   },
 ];
 
-/* Guest speakers who have run sessions or Q&As for the community. */
+/* Guest speakers who have run sessions or Q&As for the community.
+   Affiliations here are each speaker's own, not Fulcrum's. */
 export const speakers = [
   {
     name: "Anuj Nepal",
-    topics: "Continual learning and catastrophic forgetting; quantum computing",
+    role: "Deakin Cyber Research & Innovation Centre",
+    org: "Deakin University, Australia",
+    scholar: "https://scholar.google.com/citations?user=BQGqr0oAAAAJ&hl=en",
   },
   {
-    name: "Subramaniyaswamy V",
-    topics: "Dataset preparation, recommender systems, and scaling compute",
+    name: "Subramaniyaswamy Vairavan",
+    role: "Professor, School of Computer Science and Engineering",
+    org: "Vellore Institute of Technology",
+    topics: "Data science, large language models, artificial intelligence",
+    scholar: "https://scholar.google.com/citations?user=bIUUDOYAAAAJ&hl=en",
   },
 ];
 
