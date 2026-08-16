@@ -58,11 +58,11 @@ function renderSlide(deck, slide, i, total) {
         </div>
         <aside class="about-links">
           <p class="aside-title">Find us</p>
-          <p><strong>Website</strong><br/>fulcrumgo.github.io</p>
-          <p><strong>More material</strong><br/>fulcrumgo.github.io/resources</p>
-          <p><strong>Discord</strong><br/>discord.gg/gbQCGkupdJ</p>
-          <p><strong>LinkedIn</strong><br/>linkedin.com/company/gofulcrum</p>
-          <p class="about-note">Every deck we publish is free to download at fulcrumgo.github.io/resources</p>
+          <p><strong>Website</strong><br/><a href="https://fulcrumgo.github.io">fulcrumgo.github.io</a></p>
+          <p><strong>More material</strong><br/><a href="https://fulcrumgo.github.io/resources">fulcrumgo.github.io/resources</a></p>
+          <p><strong>Discord</strong><br/><a href="https://discord.gg/gbQCGkupdJ">discord.gg/gbQCGkupdJ</a></p>
+          <p><strong>LinkedIn</strong><br/><a href="https://www.linkedin.com/company/gofulcrum/">linkedin.com/company/gofulcrum</a></p>
+          <p class="about-note">Every deck we publish is free to download at <a href="https://fulcrumgo.github.io/resources">fulcrumgo.github.io/resources</a></p>
         </aside>
       </div>
       ${chrome(deck, n, total)}
@@ -85,10 +85,10 @@ function renderSlide(deck, slide, i, total) {
       <p class="section-note">${rich(slide.note)}</p>
       <p class="end-blurb">Fulcrum is a volunteer-run non-profit helping people from under-resourced regions learn AI through free mentorship, research supervision, and open material like this deck. Founded 2025 in Kathmandu, Nepal. Nothing we do costs anything.</p>
       <div class="end-contact">
-        <p><strong>Website</strong><br/>fulcrumgo.github.io</p>
-        <p><strong>Every deck, free</strong><br/>fulcrumgo.github.io/resources</p>
-        <p><strong>Apply for mentorship</strong><br/>discord.gg/gbQCGkupdJ</p>
-        <p><strong>Partnerships</strong><br/>linkedin.com/company/gofulcrum</p>
+        <p><strong>Website</strong><br/><a href="https://fulcrumgo.github.io">fulcrumgo.github.io</a></p>
+        <p><strong>Every deck, free</strong><br/><a href="https://fulcrumgo.github.io/resources">fulcrumgo.github.io/resources</a></p>
+        <p><strong>Apply for mentorship</strong><br/><a href="https://discord.gg/gbQCGkupdJ">discord.gg/gbQCGkupdJ</a></p>
+        <p><strong>Partnerships</strong><br/><a href="https://www.linkedin.com/company/gofulcrum/">linkedin.com/company/gofulcrum</a></p>
       </div>
       ${chrome(deck, n, total)}
     </section>`;
@@ -267,6 +267,9 @@ export function renderDeck(deck) {
   .wm { font-family: var(--display); font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; font-size: 12px; }
   .meta { display: flex; gap: 22px; align-items: center; }
   .num { font-variant-numeric: tabular-nums; }
+
+  a { color: inherit; text-decoration: none; }
+  .about-links a, .end-contact a { border-bottom: 1px solid var(--line); }
 
   @page { size: 1280px 720px; margin: 0; }
 </style>

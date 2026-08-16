@@ -111,6 +111,13 @@ That re-renders the PDFs into `public/materials/` and rewrites
 installed (set `CHROME_PATH` if it is somewhere unusual). The PDFs are
 committed to the repo, so CI never has to run this.
 
+Each deck is printed with a bookmark outline and an accessibility structure
+tree, then its document properties are written with pdf-lib. Chrome builds the
+outline by reading text back off the printed page, which drops the space where
+a heading wraps, so bookmark titles are rewritten from the deck data
+afterwards. The two seminar decks are Google Slides exports rather than
+pipeline output; `npm run decks:seminars` sets their document properties.
+
 > **On sourcing:** these decks are Fulcrum's own writing. If you extend them,
 > keep it that way. Course slides from universities and other organisations are
 > copyrighted work belonging to their authors. They cannot be rebranded and

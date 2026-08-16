@@ -5,7 +5,7 @@
     "subtitle": "No maths, no code, no jargon. What AI actually is, what it can and cannot do, and how to use it well. Written for students, teachers, and anyone who keeps hearing about it.",
     "file": "materials/ai-for-everyone.pdf",
     "slides": 15,
-    "sizeKb": 436
+    "sizeKb": 337
   },
   {
     "slug": "computer-vision-foundations",
@@ -13,7 +13,7 @@
     "subtitle": "How a machine gets from a grid of numbers to something worth calling perception. Written for people meeting the field for the first time.",
     "file": "materials/computer-vision-foundations.pdf",
     "slides": 17,
-    "sizeKb": 516
+    "sizeKb": 394
   },
   {
     "slug": "computer-vision-advanced",
@@ -21,7 +21,7 @@
     "subtitle": "Detection, segmentation, transformers, generative models and video: the architectures behind modern vision systems, and where each one breaks.",
     "file": "materials/computer-vision-advanced.pdf",
     "slides": 16,
-    "sizeKb": 459
+    "sizeKb": 353
   },
   {
     "slug": "machine-learning-foundations",
@@ -29,7 +29,7 @@
     "subtitle": "What it means for a machine to learn from data, the handful of ideas that recur everywhere, and how to tell a real result from a flattering one.",
     "file": "materials/machine-learning-foundations.pdf",
     "slides": 14,
-    "sizeKb": 434
+    "sizeKb": 334
   },
   {
     "slug": "deep-learning-foundations",
@@ -37,7 +37,7 @@
     "subtitle": "Neural networks from the single neuron up to the transformer: backpropagation, what depth actually buys you, how attention replaced recurrence, and what happens inside a large language model.",
     "file": "materials/deep-learning-foundations.pdf",
     "slides": 26,
-    "sizeKb": 582
+    "sizeKb": 435
   },
   {
     "slug": "ai-in-medicine",
@@ -45,7 +45,7 @@
     "subtitle": "Every specialty, what has actually been built, what works in a clinic rather than a paper, and where it fails. Written for clinicians, students, and researchers entering the field.",
     "file": "materials/ai-in-medicine.pdf",
     "slides": 34,
-    "sizeKb": 613
+    "sizeKb": 458
   },
   {
     "slug": "ai-for-experts",
@@ -53,6 +53,6 @@
     "subtitle": "For people who already build models: scaling behaviour, training at the frontier, evaluation that survives scrutiny, alignment, and the open problems worth your time.",
     "file": "materials/ai-for-experts.pdf",
     "slides": 15,
-    "sizeKb": 441
+    "sizeKb": 341
   }
 ]

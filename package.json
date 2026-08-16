@@ -8,7 +8,8 @@
     "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist/server && node scripts/prerender.mjs",
     "build:client": "vite build",
     "preview": "vite preview",
-    "decks": "node scripts/build-decks.mjs"
+    "decks": "node scripts/build-decks.mjs",
+    "decks:seminars": "node scripts/tag-seminar-pdfs.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.469.0",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",
     "@vitejs/plugin-react": "^4.3.4",
+    "pdf-lib": "^1.17.1",
     "puppeteer-core": "^24.0.0",
     "tailwindcss": "^4.0.0",
     "vite": "^6.0.7"
