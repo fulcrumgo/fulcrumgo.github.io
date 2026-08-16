@@ -385,17 +385,25 @@ export const founder = {
       venue: "Journal of Circuits, Systems and Computers",
       year: "2023",
     },
+  ],
+
+  /* Filed patent applications. Listed separately from publications because
+     they are a different kind of output and are still applications, not
+     granted patents. */
+  patents: [
     {
       title:
-        "A Quantum-Secure and Blockchain-Integrated E-Voting Framework with Identity Validation",
-      venue: "Int. Conf. on Computational Intelligence and Networks",
-      year: "2025",
+        "System for Adaptive Graph Construction and Temporal Pattern Analysis in Interactive Health Monitoring",
+      authors: "U Poudel, S Vairavan",
+      number: "IN Patent App. 202,641,012,308",
+      year: "2026",
     },
     {
       title:
-        "Influence of Artificial Intelligence on the future of psychiatry: Insights from recent advancements",
-      venue: "Psychiatry",
-      year: "2024",
+        "A Secure Electronic Voting System and Method for Post-Quantum Biometric E-Voting",
+      authors: "A Poudel, U Poudel, S Vairavan",
+      number: "IN Patent App. 202,541,132,779",
+      year: "2026",
     },
   ],
 };

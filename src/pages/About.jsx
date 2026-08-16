@@ -208,6 +208,28 @@ export default function About() {
                   </CapsLink>
                 </div>
               </div>
+
+              {/* Patent applications, kept distinct from published papers. */}
+              {founder.patents?.length > 0 && (
+                <div className="mt-14">
+                  <p className="text-sm uppercase tracking-[0.18em] text-ink-faint">
+                    Intellectual property
+                  </p>
+                  <ul className="mt-6 divide-y divide-line border-t border-line">
+                    {founder.patents.map((p) => (
+                      <li key={p.number} className="py-5">
+                        <p className="font-medium leading-snug">{p.title}</p>
+                        <p className="mt-1.5 text-sm text-ink-soft">
+                          {p.authors}
+                        </p>
+                        <p className="mt-1 text-sm text-ink-faint">
+                          {p.number} · {p.year}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </Reveal>
           </div>
         </Container>
