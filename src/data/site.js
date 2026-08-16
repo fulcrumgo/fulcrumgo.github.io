@@ -365,7 +365,7 @@ export const founder = {
   affiliations: [
     "Visiting Researcher, Deakin University",
     "Research Affiliate, Monash University",
-    "Peer reviewer, journals in medicine and health sciences",
+    "Reviewer, Journal of medicine and health sciences",
     "B.Tech, VIT University",
   ],
   interests: [
