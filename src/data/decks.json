@@ -13,7 +13,7 @@
     "subtitle": "How a machine gets from a grid of numbers to something worth calling perception. Written for people meeting the field for the first time.",
     "file": "materials/computer-vision-foundations.pdf",
     "slides": 17,
-    "sizeKb": 394
+    "sizeKb": 277
   },
   {
     "slug": "computer-vision-advanced",
@@ -44,8 +44,8 @@
     "title": "Artificial Intelligence in Medicine",
     "subtitle": "Every specialty, what has actually been built, what works in a clinic rather than a paper, and where it fails. Written for clinicians, students, and researchers entering the field.",
     "file": "materials/ai-in-medicine.pdf",
-    "slides": 34,
-    "sizeKb": 458
+    "slides": 37,
+    "sizeKb": 478
   },
   {
     "slug": "ai-for-experts",

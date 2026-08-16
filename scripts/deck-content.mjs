@@ -915,6 +915,50 @@ export const aiInMedicine = {
     },
     {
       type: "content",
+      heading: "How medicine has always made decisions",
+      lede: "Long before machine learning, medicine was already a prediction discipline. It just made its rules explicit.",
+      bullets: [
+        "**Clinical reasoning.** Pattern recognition by a human who can explain the pattern, then test it.",
+        "**Evidence based medicine.** From the early 1990s, decisions tied to trial evidence rather than authority, with the randomised controlled trial at the top.",
+        "**Statistical risk scores.** Framingham for cardiovascular risk, APACHE II for intensive care mortality. Regression models fitted to cohort data, in use for forty years.",
+        "**Rule based expert systems.** MYCIN, Stanford in the 1970s, recommended antibiotics from roughly six hundred hand written rules and matched specialists. Never used clinically.",
+      ],
+      note: "Worth remembering when someone calls clinical AI new. What changed is where the rules come from.",
+      aside: {
+        title: "Why MYCIN matters",
+        body: "It worked and still failed to reach patients, for reasons of workflow, liability and integration rather than accuracy. Fifty years later those are still the reasons most clinical models never get used.",
+      },
+    },
+    {
+      type: "content",
+      heading: "What current AI does differently",
+      lede: "One change, and everything else follows from it.",
+      bullets: [
+        "**The rules are learned, not written.** Nobody tells the model what a tumour looks like. It infers that from labelled examples, which is why it scales to problems too subtle to write down.",
+        "**It finds signal humans cannot articulate.** A cardiologist cannot read ejection fraction off a standard ECG. A trained network can. That is a genuinely new capability, not a faster version of an old one.",
+        "**It works on raw inputs.** Traditional risk scores need a human to decide which variables matter. Deep models take the pixels or the waveform directly.",
+        "**It updates in days, not years.** A guideline takes a decade from trial to practice. A model can be retrained over a weekend, which is a strength and a governance problem at the same time.",
+      ],
+      note: "The trade is real. You gain the ability to use signals nobody has named, and you lose the ability to read the rule off the page and argue with it.",
+    },
+    {
+      type: "content",
+      heading: "Where the two ways of thinking clash",
+      lede: "Most friction between clinicians and model builders traces back to one of these four.",
+      bullets: [
+        "**Cause against correlation.** Medicine asks why a treatment works and demands a mechanism. A model reports what predicts an outcome, which is not the same claim and does not support the same decisions.",
+        "**Explanation.** A clinician can justify a decision to a patient, a colleague and a court. Most models cannot, and post hoc explanation methods describe the model rather than the biology.",
+        "**Evidence standards.** Medicine trusts the prospective randomised trial. Almost all clinical AI evidence is retrospective on data collected for other purposes.",
+        "**Where the error lands.** A guideline that is wrong is wrong visibly and gets revised. A model that is quietly miscalibrated for one group keeps being wrong, in the same direction, without anyone noticing.",
+      ],
+      note: "None of this argues against using models. It argues for holding them to the standard medicine already holds everything else to, which is the subject of the rest of this deck.",
+      aside: {
+        title: "The useful framing",
+        body: "Traditional methods are transparent and limited. Learned models are capable and opaque. Good clinical AI is mostly the work of getting the capability without giving up the accountability.",
+      },
+    },
+    {
+      type: "content",
       heading: "Why clinical AI is not ordinary machine learning",
       bullets: [
         "**The cost of errors is asymmetric.** A missed cancer and a false alarm are not equally bad, and which is worse depends on the disease, the test that follows, and the patient.",
