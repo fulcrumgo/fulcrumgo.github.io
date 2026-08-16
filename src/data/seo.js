@@ -158,7 +158,7 @@ export function organizationLd(siteUrl) {
       "@type": "Person",
       name: founder.name,
       url: founder.links.website,
-      sameAs: [founder.links.scholar, founder.links.website],
+      sameAs: Object.values(founder.links),
     },
     sameAs: [contact.linkedin, contact.instagram, contact.discord],
     knowsAbout: [
@@ -277,7 +277,7 @@ export function personLd(siteUrl) {
     jobTitle: `${founder.role}, ${org.name}`,
     description: founder.bio,
     url: founder.links.website,
-    sameAs: [founder.links.website, founder.links.scholar],
+    sameAs: Object.values(founder.links),
     // The founder's own affiliations. Fulcrum itself has no institutional
     // affiliations, so nothing here may be presented as the organisation's.
     affiliation: founder.affiliations.map((a) => ({

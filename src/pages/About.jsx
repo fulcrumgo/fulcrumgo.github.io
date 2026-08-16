@@ -161,21 +161,17 @@ export default function About() {
                 ))}
               </div>
 
-              <div className="mt-9 flex flex-col gap-4">
-                <CapsLink
-                  href={founder.links.website}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  Personal site
-                </CapsLink>
-                <CapsLink
-                  href={founder.links.scholar}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  Google Scholar
-                </CapsLink>
+              <div className="mt-9 flex flex-col items-start gap-4">
+                {founder.profiles.map((p) => (
+                  <CapsLink
+                    key={p.label}
+                    href={p.url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    {p.label}
+                  </CapsLink>
+                ))}
               </div>
             </Reveal>
 

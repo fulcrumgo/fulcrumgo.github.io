@@ -349,6 +349,15 @@ export const speakers = [
    Founder. Facts below are drawn from the public Google Scholar profile
    and personal site.
    -------------------------------------------------------------------------- */
+/* The founder's own profiles. Defined above `founder` so the ordered
+   `profiles` list below can reference them without repeating URLs. */
+const founderLinks = {
+  googleSite: "https://sites.google.com/view/utsavpoudel/home",
+  website: "https://utsavpoudel.com.np/",
+  scholar: "https://scholar.google.com/citations?user=BEfjz2gAAAAJ&hl=en",
+  linkedin: "https://www.linkedin.com/in/utsavpoudell/",
+};
+
 export const founder = {
   name: "Utsav Poudel",
   role: "Founder",
@@ -368,10 +377,15 @@ export const founder = {
   quote:
     "Computer intelligence is the only invention mankind will ever need to build. Shouldn't everyone get a fair chance to understand, use, and create it, including those from underserved regions?",
   bio: "Utsav Poudel founded Fulcrum after seeing the same pattern repeat: capable students from under-resourced institutions held back not by ability but by access to supervision, to reviewers, to the people already inside the field. His own research spans human-centered AI and spatial computing, with published work on AI in mental health, OCR systems, and post-quantum secure e-voting.",
-  links: {
-    website: "https://utsavpoudel.com.np/",
-    scholar: "https://scholar.google.com/citations?user=BEfjz2gAAAAJ&hl=en",
-  },
+  links: founderLinks,
+
+  /* Rendered on the About page in exactly this order. */
+  profiles: [
+    { label: "Google Site", url: founderLinks.googleSite },
+    { label: "Personal site", url: founderLinks.website },
+    { label: "Google Scholar", url: founderLinks.scholar },
+    { label: "LinkedIn", url: founderLinks.linkedin },
+  ],
   publications: [
     {
       title:
