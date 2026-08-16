@@ -284,34 +284,40 @@
   font-size: clamp(0.95rem, 5.1vw, 4.9rem);
   line-height: 1.1;
   white-space: nowrap;
+  /* A wide, soft bright band inside a grey field. Sweeping the background
+     position drags it across the letters. The band is deliberately broad so
+     several words light at once, and the sweep runs past both ends so the
+     first and last words are covered too. */
   background: linear-gradient(
     100deg,
     #6f6f6f 0%,
-    #6f6f6f 38%,
-    #d8d8d8 46%,
+    #6f6f6f 16%,
+    #a8a8a8 30%,
+    #e8e8e8 41%,
     #ffffff 50%,
-    #d8d8d8 54%,
-    #6f6f6f 62%,
+    #e8e8e8 59%,
+    #a8a8a8 70%,
+    #6f6f6f 84%,
     #6f6f6f 100%
   );
-  background-size: 300% 100%;
+  background-size: 200% 100%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 
   /* text-shadow cannot render through background-clip: text, so the bloom
      is a drop-shadow on the element, timed to the same 6s cycle. */
-  animation: brand-flow 6s linear infinite,
-    brand-bloom 6s ease-in-out infinite;
+  animation: brand-flow 9s linear infinite,
+    brand-bloom 9s ease-in-out infinite;
   will-change: background-position, filter;
 }
 
 @keyframes brand-flow {
   from {
-    background-position: 150% 0;
+    background-position: 200% 0;
   }
   to {
-    background-position: -150% 0;
+    background-position: -100% 0;
   }
 }
 
