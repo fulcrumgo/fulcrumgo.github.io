@@ -136,7 +136,7 @@ function Thesis() {
           <p className="prose-fulcrum mt-10 max-w-2xl">
             <span className="text-ink-soft">
               Fulcrum pivots potential from under-resourced regions toward
-              learning about (and shaping), the future of artificial
+              learning about and shaping the future of artificial
               intelligence. We do it through global mentorship, free learning
               resources, research supervision, and by bridging the gap between
               rural communities and the frontier of the field.

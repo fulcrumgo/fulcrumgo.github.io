@@ -149,7 +149,7 @@ export default function Footer() {
 
         {/* Brand line, echoing the current site's closing statement */}
         <div className="flex flex-col gap-6 border-t border-white/10 pt-10 md:flex-row md:items-end md:justify-between">
-          <p className="font-display text-[2.5rem] font-semibold leading-[0.95] tracking-tight text-paper/10 md:text-[4rem]">
+          <p className="brand-glow font-display text-[2.5rem] font-semibold leading-[0.95] tracking-tight md:text-[4rem]">
             A place to learn.
             <br />
             A chance to grow.

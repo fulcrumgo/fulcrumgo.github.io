@@ -2,8 +2,8 @@
  * Builds the complete <head> tag set for a route.
  *
  * One implementation, two consumers:
- *   - scripts/prerender.mjs serialises the result into static HTML at build time
- *   - <Seo /> applies it to the live DOM on client-side navigation
+ *   • scripts/prerender.mjs serialises the result into static HTML at build time
+ *   • <Seo /> applies it to the live DOM on client-side navigation
  *
  * Keeping both on the same source means a prerendered page and a
  * client-navigated page can never disagree about their metadata.

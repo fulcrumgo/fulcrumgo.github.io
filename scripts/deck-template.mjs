@@ -58,10 +58,11 @@ function renderSlide(deck, slide, i, total) {
         </div>
         <aside class="about-links">
           <p class="aside-title">Find us</p>
-          <p><strong>LinkedIn</strong><br/>linkedin.com/company/gofulcrum</p>
+          <p><strong>Website</strong><br/>fulcrumgo.github.io</p>
+          <p><strong>More material</strong><br/>fulcrumgo.github.io/resources</p>
           <p><strong>Discord</strong><br/>discord.gg/gbQCGkupdJ</p>
-          <p><strong>Instagram</strong><br/>@gofulcrum</p>
-          <p class="about-note">Every program is free. Mentorship applications go through Discord.</p>
+          <p><strong>LinkedIn</strong><br/>linkedin.com/company/gofulcrum</p>
+          <p class="about-note">Every deck we publish is free to download at fulcrumgo.github.io/resources</p>
         </aside>
       </div>
       ${chrome(deck, n, total)}
@@ -84,9 +85,10 @@ function renderSlide(deck, slide, i, total) {
       <p class="section-note">${rich(slide.note)}</p>
       <p class="end-blurb">Fulcrum is a volunteer-run non-profit helping people from under-resourced regions learn AI through free mentorship, research supervision, and open material like this deck. Founded 2025 in Kathmandu, Nepal. Nothing we do costs anything.</p>
       <div class="end-contact">
+        <p><strong>Website</strong><br/>fulcrumgo.github.io</p>
+        <p><strong>Every deck, free</strong><br/>fulcrumgo.github.io/resources</p>
         <p><strong>Apply for mentorship</strong><br/>discord.gg/gbQCGkupdJ</p>
-        <p><strong>Partnerships and enquiries</strong><br/>linkedin.com/company/gofulcrum</p>
-        <p><strong>Instagram</strong><br/>@gofulcrum</p>
+        <p><strong>Partnerships</strong><br/>linkedin.com/company/gofulcrum</p>
       </div>
       ${chrome(deck, n, total)}
     </section>`;
@@ -234,7 +236,7 @@ export function renderDeck(deck) {
     width: 360px; flex-shrink: 0; background: var(--paper);
     border: 1px solid var(--line); padding: 26px;
   }
-  .about-links p { font-size: 14px; line-height: 1.5; color: var(--soft); }
+  .about-links p { font-size: 13.5px; line-height: 1.5; color: var(--soft); }
   .about-links p + p { margin-top: 12px; }
   .about-links strong { font-family: var(--display); color: var(--ink); }
   .about-note {
@@ -249,7 +251,7 @@ export function renderDeck(deck) {
     margin-top: 24px; max-width: 860px; font-size: 16px;
     line-height: 1.6; color: var(--soft);
   }
-  .end-contact { display: flex; gap: 56px; margin-top: 38px; }
+  .end-contact { display: flex; gap: 44px; margin-top: 34px; flex-wrap: wrap; }
   .end-contact p { font-size: 15px; line-height: 1.6; color: var(--soft); }
   .end-contact strong { font-family: var(--display); color: var(--ink); }
 

@@ -6,7 +6,7 @@
         HTML file (so crawlers and social scrapers see them without running JS)
      2. at runtime, applied on client-side navigation by <Seo />
 
-   Keep titles under ~60 characters and descriptions between 120–158, or
+   Keep titles under ~60 characters and descriptions between 120 and 158, or
    Google will truncate them in results.
    ========================================================================== */
 
