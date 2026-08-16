@@ -5,7 +5,13 @@ import { ArrowRight } from "lucide-react";
 /* Page gutter. One container width used everywhere for vertical rhythm. */
 export function Container({ className = "", children }) {
   return (
-    <div className={`mx-auto w-full max-w-[1180px] px-6 md:px-10 ${className}`}>
+    /* The max width steps up on large displays. At a fixed 1180px a 16 inch
+       laptop left roughly 310px of dead margin on each side, about a third of
+       the screen. Prose blocks keep their own max-w so line length stays
+       readable regardless. */
+    <div
+      className={`mx-auto w-full max-w-[1180px] px-6 md:px-10 xl:max-w-[1320px] 2xl:max-w-[1440px] ${className}`}
+    >
       {children}
     </div>
   );
@@ -23,7 +29,7 @@ export function Section({
     paper: "bg-paper",
     warm: "bg-paper-warm",
     deep: "bg-paper-deep",
-    ink: "bg-ink text-paper",
+    ink: "bg-ink text-paper on-ink",
   };
   return (
     <section

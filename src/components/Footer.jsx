@@ -12,7 +12,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-ink text-paper">
+    <footer className="on-ink bg-ink text-paper">
       <Container className="py-20 md:py-24">
         {/* Discord invitation, kept from the current site, wording per the
             latest content revision. */}
@@ -22,7 +22,7 @@ export default function Footer() {
             <h2 className="text-[1.75rem] font-semibold md:text-[2.25rem]">
               Join our Discord community, drop a hello!
             </h2>
-            <p className="mt-4 text-paper/60">
+            <p className="mt-4 text-paper/70">
               Chances are, you’ll find someone with similar interests.
             </p>
             <a
@@ -42,14 +42,14 @@ export default function Footer() {
               className="h-36 w-36 bg-paper p-2 md:h-40 md:w-40"
               loading="lazy"
             />
-            <figcaption className="mt-3 text-center text-xs text-paper/50">
+            <figcaption className="mt-3 text-center text-xs text-paper/70">
               Scan to join our Discord.
             </figcaption>
           </figure>
         </div>
 
         {/* Link columns */}
-        <div className="grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-x-10 gap-y-14 py-16 sm:grid-cols-2 xl:grid-cols-4 xl:gap-x-12">
           <div>
             <Link to="/" className="inline-flex items-center gap-2.5 text-paper">
               <Mark className="h-6 w-6" />
@@ -57,10 +57,10 @@ export default function Footer() {
                 Fulcrum
               </span>
             </Link>
-            <p className="mt-5 max-w-xs text-sm leading-relaxed text-paper/55">
+            <p className="mt-5 max-w-xs text-sm leading-relaxed text-paper/70">
               {org.shortDescription}
             </p>
-            <p className="mt-5 text-sm text-paper/40">
+            <p className="mt-5 text-sm text-paper/60">
               {org.type} · Founded {org.founded}
               <br />
               {org.location}
@@ -68,13 +68,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="eyebrow mb-5">Explore</p>
-            <ul className="space-y-3">
+            <p className="eyebrow mb-6">Explore</p>
+            <ul className="space-y-3.5">
               {nav.map((item) => (
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className="text-sm text-paper/60 transition-colors hover:text-paper"
+                    className="text-sm text-paper/70 transition-colors hover:text-paper"
                   >
                     {item.label}
                   </Link>
@@ -84,13 +84,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="eyebrow mb-5">Programs</p>
-            <ul className="space-y-3">
+            <p className="eyebrow mb-6">Programs</p>
+            <ul className="space-y-3.5">
               {programs.map((p) => (
                 <li key={p.slug}>
                   <Link
                     to={`/programs#${p.slug}`}
-                    className="text-sm text-paper/60 transition-colors hover:text-paper"
+                    className="text-sm text-paper/70 transition-colors hover:text-paper"
                   >
                     {p.title}
                   </Link>
@@ -100,8 +100,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="eyebrow mb-5">Contact</p>
-            <ul className="space-y-3 text-sm">
+            <p className="eyebrow mb-6">Contact</p>
+            <ul className="space-y-5 text-sm">
               <li>
                 <a
                   href={contact.discord}
@@ -111,7 +111,7 @@ export default function Footer() {
                 >
                   Discord
                 </a>
-                <span className="block text-xs text-paper/35">
+                <span className="block text-xs text-paper/55">
                   Mentorship applications and community
                 </span>
               </li>
@@ -124,7 +124,7 @@ export default function Footer() {
                 >
                   LinkedIn
                 </a>
-                <span className="block text-xs text-paper/35">
+                <span className="block text-xs text-paper/55">
                   Partnerships and formal enquiries
                 </span>
               </li>
@@ -138,7 +138,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center border border-white/15 text-paper/70 transition-all duration-300 hover:border-accent hover:bg-accent hover:text-paper"
+                  className="flex h-9 w-9 items-center justify-center border border-white/25 text-paper/80 transition-all duration-300 hover:border-accent hover:bg-accent hover:text-paper"
                 >
                   <Icon className="h-4 w-4" />
                 </a>
@@ -154,7 +154,7 @@ export default function Footer() {
             <br />
             A chance to grow.
           </p>
-          <p className="text-xs text-paper/40">
+          <p className="text-xs text-paper/60">
             © {new Date().getFullYear()} {org.name}. All rights reserved.
           </p>
         </div>
