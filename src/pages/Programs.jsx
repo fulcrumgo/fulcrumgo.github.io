@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import PageHero from "../components/PageHero";
+import SectionNav from "../components/SectionNav";
 import {
   Container,
   Section,
@@ -18,22 +19,8 @@ export default function Programs() {
         lede="Mentorship, research supervision, project building, workshops, and a guest speaker series, open to anyone we can reach."
       />
 
-      {/* Jump nav */}
-      <div className="sticky top-[70px] z-40 border-y border-line bg-paper/90 backdrop-blur-md">
-        <Container>
-          <nav className="flex gap-7 overflow-x-auto py-4">
-            {programs.map((p) => (
-              <a
-                key={p.slug}
-                href={`#${p.slug}`}
-                className="whitespace-nowrap text-sm text-ink-soft transition-colors hover:text-accent"
-              >
-                {p.title}
-              </a>
-            ))}
-          </nav>
-        </Container>
-      </div>
+      <SectionNav items={programs.map((p) => ({ id: p.slug, label: p.title }))} />
+
 
       {programs.map((p, i) => (
         <Section

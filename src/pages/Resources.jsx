@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Download, Eye, FileText, Link2, Check } from "lucide-react";
 import PageHero from "../components/PageHero";
+import SectionNav from "../components/SectionNav";
 import {
   Container,
   Section,
@@ -135,7 +136,7 @@ function ReadingOrder() {
   let step = 0;
 
   return (
-    <Section tone="warm">
+    <Section id="where-to-start" className="scroll-mt-[124px]" tone="warm">
       <Container>
         <Reveal>
           <SectionHead
@@ -217,10 +218,20 @@ export default function Resources() {
         lede="Course notes written for Fulcrum, plus the slides from sessions we have delivered. Open any of them in your browser or save the PDF. No sign-up, no email wall, take them and use them."
       />
 
+      <SectionNav
+        items={[
+          { id: "where-to-start", label: "Where to start" },
+          { id: "course-notes", label: "Course notes" },
+          { id: "seminar-slides", label: "Seminar slides" },
+          { id: "in-the-field", label: "In the field" },
+        ]}
+      />
+
+
       <ReadingOrder />
 
       {/* Course notes */}
-      <Section tone="paper">
+      <Section id="course-notes" className="scroll-mt-[124px]" tone="paper">
         <Container>
           <Reveal>
             <SectionHead
@@ -273,7 +284,7 @@ export default function Resources() {
       </Section>
 
       {/* Seminar decks */}
-      <Section tone="warm">
+      <Section id="seminar-slides" className="scroll-mt-[124px]" tone="warm">
         <Container>
           <Reveal>
             <SectionHead
@@ -294,7 +305,7 @@ export default function Resources() {
       </Section>
 
       {/* Where these were taught */}
-      <Section tone="paper">
+      <Section id="in-the-field" className="scroll-mt-[124px]" tone="paper">
         <Container>
           <Reveal>
             <SectionHead

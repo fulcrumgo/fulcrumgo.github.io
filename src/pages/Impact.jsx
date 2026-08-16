@@ -1,5 +1,6 @@
 import { ExternalLink, Quote } from "lucide-react";
 import PageHero from "../components/PageHero";
+import SectionNav from "../components/SectionNav";
 import {
   Container,
   Section,
@@ -27,7 +28,7 @@ import {
    ------------------------------------------------------------------------- */
 function Gallery() {
   return (
-    <Section tone="paper">
+    <Section id="in-the-room" className="scroll-mt-[124px]" tone="paper">
       <Container>
         <Reveal>
           <SectionHead
@@ -76,7 +77,7 @@ function Gallery() {
    ------------------------------------------------------------------------- */
 function SchoolPost() {
   return (
-    <Section tone="warm">
+    <Section id="what-they-said" className="scroll-mt-[124px]" tone="warm">
       <Container>
         <div className="grid gap-12 md:grid-cols-12 md:gap-16">
           <Reveal className="md:col-span-7">
@@ -143,7 +144,7 @@ function SchoolPost() {
    ------------------------------------------------------------------------- */
 function Sessions() {
   return (
-    <Section tone="paper">
+    <Section id="sessions" className="scroll-mt-[124px]" tone="paper">
       <Container>
         <Reveal>
           <SectionHead
@@ -237,7 +238,7 @@ function Sessions() {
    ------------------------------------------------------------------------- */
 function Collaborators() {
   return (
-    <Section tone="warm">
+    <Section id="with" className="scroll-mt-[124px]" tone="warm">
       <Container>
         <Reveal>
           <SectionHead
@@ -329,8 +330,19 @@ export default function Impact() {
         lede="We do not have an office. We have a laptop, a projector when the room has one, and material we give away. Here is what that has added up to so far."
       />
 
+      <SectionNav
+        items={[
+          { id: "numbers", label: "Where we stand" },
+          { id: "in-the-room", label: "In the room" },
+          { id: "what-they-said", label: "What the school said" },
+          { id: "sessions", label: "Sessions delivered" },
+          { id: "with", label: "Who we ran them with" },
+        ]}
+      />
+
+
       {/* Numbers */}
-      <Section tone="paper" compact>
+      <Section id="numbers" className="scroll-mt-[124px]" tone="paper" compact>
         <Container>
           <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
             {stats.items.map((s, i) => (

@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import PageHero from "../components/PageHero";
+import SectionNav from "../components/SectionNav";
 import {
   Container,
   Section,
@@ -39,8 +40,18 @@ export default function GetInvolved() {
         lede="Every mentor, speaker, and partner here is someone who decided an hour of their week was worth it. There is no paid staff."
       />
 
+      <SectionNav
+        items={[
+          { id: "ways-in", label: "Ways in" },
+          { id: "become-a-mentor", label: "Become a mentor" },
+          { id: "who", label: "Who we’re looking for" },
+          { id: "community", label: "Community" },
+        ]}
+      />
+
+
       {/* Three ways in */}
-      <Section tone="paper">
+      <Section id="ways-in" className="scroll-mt-[124px]" tone="paper">
         <Container>
           <div className="grid gap-px overflow-hidden border border-line bg-line md:grid-cols-3">
             {involvement.map((item, i) => (
@@ -64,7 +75,7 @@ export default function GetInvolved() {
       </Section>
 
       {/* Become a mentor, the detail */}
-      <Section tone="warm">
+      <Section id="become-a-mentor" className="scroll-mt-[124px]" tone="warm">
         <Container>
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <Reveal className="md:col-span-6">
@@ -133,7 +144,7 @@ export default function GetInvolved() {
       </Section>
 
       {/* Who we're looking for */}
-      <Section tone="paper">
+      <Section id="who" className="scroll-mt-[124px]" tone="paper">
         <Container>
           <Reveal>
             <SectionHead
@@ -156,7 +167,7 @@ export default function GetInvolved() {
       </Section>
 
       {/* Community */}
-      <Section tone="ink" compact>
+      <Section id="community" className="scroll-mt-[124px]" tone="ink" compact>
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">

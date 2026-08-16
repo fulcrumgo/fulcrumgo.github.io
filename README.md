@@ -173,6 +173,7 @@ src/
     Nav.jsx           sticky header + mobile drawer
     Footer.jsx        Discord invite, link columns, brand line
     PageHero.jsx      shared masthead for interior pages
+    SectionNav.jsx    sticky in-page nav, used on the five long pages
     Seo.jsx           keeps <head> correct on client-side navigation
     ui.jsx            Section, Container, Reveal, Button, CapsLink, Stat…
   pages/              Home, About, Programs, Impact, Resources,

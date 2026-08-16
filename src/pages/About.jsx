@@ -1,4 +1,5 @@
 import PageHero from "../components/PageHero";
+import SectionNav from "../components/SectionNav";
 import {
   Container,
   Section,
@@ -38,8 +39,18 @@ export default function About() {
         lede={`${org.type} · Founded ${org.founded} · ${org.location}`}
       />
 
+      <SectionNav
+        items={[
+          { id: "vision", label: "Our vision" },
+          { id: "name", label: "Why the name" },
+          { id: "how-we-work", label: "How we work" },
+          { id: "founder", label: "Founder" },
+        ]}
+      />
+
+
       {/* Vision */}
-      <Section tone="paper">
+      <Section id="vision" className="scroll-mt-[124px]" tone="paper">
         <Container>
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <Reveal className="md:col-span-5">
@@ -82,7 +93,7 @@ export default function About() {
       </Section>
 
       {/* Why "Fulcrum" */}
-      <Section tone="ink" compact>
+      <Section id="name" className="scroll-mt-[124px]" tone="ink" compact>
         <Container>
           <Reveal>
             <div className="mx-auto max-w-3xl text-center">
@@ -115,7 +126,7 @@ export default function About() {
       </Section>
 
       {/* How we work */}
-      <Section tone="paper">
+      <Section id="how-we-work" className="scroll-mt-[124px]" tone="paper">
         <Container>
           <Reveal>
             <SectionHead
@@ -140,7 +151,7 @@ export default function About() {
       </Section>
 
       {/* Founder */}
-      <Section tone="warm">
+      <Section id="founder" className="scroll-mt-[124px]" tone="warm">
         <Container>
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <Reveal className="md:col-span-4">

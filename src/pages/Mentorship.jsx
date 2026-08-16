@@ -1,5 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import PageHero from "../components/PageHero";
+import SectionNav from "../components/SectionNav";
 import {
   Container,
   Section,
@@ -40,8 +41,19 @@ export default function Mentorship() {
         lede="One-on-one and group mentorship with working researchers and practitioners. Free, and open to anyone from an under-resourced region."
       />
 
+      <SectionNav
+        items={[
+          { id: "how-it-works", label: "How it works" },
+          { id: "what-you-need", label: "What you’ll need" },
+          { id: "process", label: "The process" },
+          { id: "apply", label: "Apply" },
+          { id: "questions", label: "Questions" },
+        ]}
+      />
+
+
       {/* How it actually runs */}
-      <Section tone="paper">
+      <Section id="how-it-works" className="scroll-mt-[124px]" tone="paper">
         <Container>
           <div className="grid items-center gap-12 md:grid-cols-12 md:gap-16">
             <Reveal className="md:col-span-6">
@@ -77,7 +89,7 @@ export default function Mentorship() {
       </Section>
 
       {/* What to send */}
-      <Section tone="warm">
+      <Section id="what-you-need" className="scroll-mt-[124px]" tone="warm">
         <Container>
           <Reveal>
             <SectionHead
@@ -104,7 +116,7 @@ export default function Mentorship() {
       </Section>
 
       {/* Process */}
-      <Section tone="paper">
+      <Section id="process" className="scroll-mt-[124px]" tone="paper">
         <Container>
           <Reveal>
             <SectionHead eyebrow="The process" title="How applying works." />
@@ -131,7 +143,7 @@ export default function Mentorship() {
       </Section>
 
       {/* Apply CTA */}
-      <Section tone="ink">
+      <Section id="apply" className="scroll-mt-[124px]" tone="ink">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -160,7 +172,7 @@ export default function Mentorship() {
       </Section>
 
       {/* FAQ */}
-      <Section tone="paper">
+      <Section id="questions" className="scroll-mt-[124px]" tone="paper">
         <Container>
           <Reveal>
             <SectionHead eyebrow="Questions" title="Before you ask." />
