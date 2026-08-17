@@ -8,14 +8,16 @@ import { useEffect, useRef } from "react";
  * proportion to depth, so the near ones move further than the far ones and the
  * field reads as having space in it.
  *
- * Deliberately restrained: on a white page, anything stronger fights the
- * headline. Tune COUNT / PUSH / alpha range below if you want more or less.
+ * Deliberately restrained: on a white page anything stronger fights the
+ * headline, so these sit just barely above the paper colour. Tune COUNT,
+ * the size range, the alpha range or the fill below to change how present
+ * they are.
  *
  * Everything is drawn to one canvas, so this is a single composited layer
  * rather than 40 animated DOM nodes.
  */
 
-const COUNT = 40;
+const COUNT = 26;
 const PUSH_RADIUS = 190; // px around the cursor that shards react within
 const PUSH_STRENGTH = 46; // px of displacement at the very centre
 const EASE = 0.06; // how quickly a shard reaches its target offset
@@ -28,9 +30,10 @@ function makeShards(count) {
     shards.push({
       bx: Math.random(),
       by: Math.random(),
-      size: 3 + depth * 11,
+      // 30% smaller than the original 3 to 14px range
+      size: 2.1 + depth * 7.7,
       depth,
-      alpha: 0.05 + depth * 0.13,
+      alpha: 0.05 + depth * 0.11,
       rot: Math.random() * Math.PI * 2,
       rotSpeed: (Math.random() - 0.5) * 0.0004,
       // Each shard drifts on its own slow sine, so the field never pulses
@@ -56,8 +59,10 @@ function drawShard(ctx, x, y, size, rot, alpha) {
   ctx.lineTo(-size, h * 0.8);
   ctx.closePath();
 
-  // Warm grey rather than pure white, white on a white page is invisible.
-  ctx.fillStyle = `rgba(120, 116, 108, ${alpha})`;
+  /* Very close to the paper colour. Composited over white this lands
+     between #FBFBFB and #F3F3F3, so the shards read as a texture in the
+     page rather than as objects sitting on top of it. */
+  ctx.fillStyle = `rgba(182, 178, 170, ${alpha})`;
   ctx.fill();
   ctx.restore();
 }
