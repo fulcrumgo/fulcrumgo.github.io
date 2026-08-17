@@ -169,6 +169,7 @@ src/
     head.js           builds the <head> tag set for a route
   components/
     Mark.jsx          the lever-and-pivot logo, redrawn as SVG
+    NextPage.jsx      the "keep going" band, one closed loop of all 8 pages
     CursorCrystals.jsx  the drifting shard field behind the hero
     Nav.jsx           sticky header + mobile drawer
     Footer.jsx        Discord invite, link columns, brand line
@@ -185,6 +186,25 @@ scripts/
   deck-content.mjs    the course notes, as data
   deck-template.mjs   slide layout and styling
 ```
+
+### The page loop
+
+Every page ends with a "keep going" band pointing at the next page. The
+links form a single closed cycle, home, about, programs, impact, resources,
+mentorship, get involved, contact, and back to home, so following them from
+anywhere reaches every page and returns to the start. No page is a dead end
+and none is orphaned.
+
+It lives in `pageFlow` in `src/data/site.js` and is rendered once in
+`App.jsx` rather than added to each page, so a new page needs only an entry
+there. Routes absent from the map get no band, which is how the 404 page
+avoids one.
+
+Each entry carries a `tone` that must contrast with the page's final
+section, otherwise the band merges into it. Six pages end white or ink and
+take the default warm; About and Contact end warm and are set to `paper`.
+
+---
 
 ## Design system
 

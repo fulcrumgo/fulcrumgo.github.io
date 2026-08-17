@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import NextPage from "./components/NextPage";
 import Seo from "./components/Seo";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -53,6 +54,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+      <NextPage />
       <Footer />
     </>
   );
