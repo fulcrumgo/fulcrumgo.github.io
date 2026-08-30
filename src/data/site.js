@@ -551,6 +551,25 @@ export const seminarDecks = [
 ];
 
 /* --------------------------------------------------------------------------
+   Other guides.
+
+   Practical resources we publish that have nothing to do with AI. Kept in a
+   separate array, and rendered in its own section below the AI decks, so
+   the Resources page never implies these are part of the AI curriculum or
+   the suggested study order.
+   -------------------------------------------------------------------------- */
+export const otherGuides = [
+  {
+    slug: "pte-academic-course",
+    title: "PTE Academic: Complete Course & Preparation Guide",
+    subtitle:
+      "A walkthrough of every task in the PTE Academic English test, covering the format updated in August 2026: all three sections, how scoring works, an eight-week study plan, and a test-day checklist.",
+    file: "materials/pte-academic-course-2026.pdf",
+    meta: "40 slides",
+  },
+];
+
+/* --------------------------------------------------------------------------
    Suggested reading order for the materials.
 
    The order is not arbitrary. Two decks state their own prerequisites:

@@ -11,7 +11,7 @@ import {
   Button,
 } from "../components/ui";
 import { asset } from "../lib/asset";
-import { seminarDecks, seminars, contact, org, learningPath } from "../data/site";
+import { seminarDecks, otherGuides, seminars, contact, org, learningPath } from "../data/site";
 import courseDecks from "../data/decks.json";
 
 /**
@@ -223,6 +223,7 @@ export default function Resources() {
           { id: "where-to-start", label: "Where to start" },
           { id: "course-notes", label: "Course notes" },
           { id: "seminar-slides", label: "Seminar slides" },
+          { id: "other-guides", label: "Other guides" },
           { id: "in-the-field", label: "In the field" },
         ]}
       />
@@ -299,6 +300,30 @@ export default function Resources() {
               <Reveal key={d.slug} delay={i * 0.08}>
                 <DeckCard {...d} />
               </Reveal>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* Other guides: deliberately separate from the AI decks above, both
+          in data (otherGuides, not courseDecks or seminarDecks) and in
+          framing, so this never reads as part of the AI curriculum or the
+          suggested study order. */}
+      <Section id="other-guides" className="scroll-mt-[124px]" tone="paper">
+        <Container>
+          <Reveal>
+            <div className="border-t border-line pt-14">
+              <SectionHead
+                eyebrow="Other guides"
+                title="Not part of the AI curriculum, but useful."
+                lede="Many of the people we work with are also applying to study or work abroad. This has nothing to do with artificial intelligence and sits outside the study path above, published here for the same reason as everything else: it is useful, and it is free."
+              />
+            </div>
+          </Reveal>
+
+          <div className="mt-16 max-w-xl border border-line">
+            {otherGuides.map((g) => (
+              <DeckCard key={g.slug} title={g.title} subtitle={g.subtitle} file={g.file} meta={g.meta} />
             ))}
           </div>
         </Container>
