@@ -622,6 +622,77 @@ export const learningPath = {
   ],
 };
 
+/* --------------------------------------------------------------------------
+   The loop that runs along the bottom of every page.
+
+   Each entry points at the next page in a single cycle, so following the
+   link from any page eventually returns you to where you started and every
+   page is reachable from every other. Contact closes the circle back to the
+   home page.
+
+   Rendered by components/NextPage.jsx, which reads the current route. A
+   route missing from this map simply gets no block, which is why the 404
+   page does not show one.
+
+   `tone` must be the OPPOSITE of whatever the page's final section uses,
+   or the block merges into it and reads as part of the section above
+   rather than as a new one. Six pages end on white or ink and take the
+   default warm; About and Contact end warm and are set to paper here.
+   If you restyle the end of a page, flip its tone to match.
+   -------------------------------------------------------------------------- */
+export const pageFlow = {
+  "/": {
+    prompt: "Wondering who actually runs this?",
+    to: "/about",
+    label: "About Fulcrum",
+    hint: "Where the name comes from, and the four things we refuse to compromise on.",
+  },
+  "/about": {
+    tone: "paper",
+    prompt: "Want to know what we actually do?",
+    to: "/programs",
+    label: "Our programs",
+    hint: "Five of them, all free, from one-on-one mentorship to the speaker series.",
+  },
+  "/programs": {
+    prompt: "Want to see a program in a real classroom?",
+    to: "/impact",
+    label: "Our impact",
+    hint: "Photographs from Pokhara, every session we have run, and what the school said.",
+  },
+  "/impact": {
+    prompt: "Want the material we taught from?",
+    to: "/resources",
+    label: "Resources",
+    hint: "Nine decks, free to read or download, with a suggested order to work through them.",
+  },
+  "/resources": {
+    prompt: "Want someone to work through it with you?",
+    to: "/mentorship",
+    label: "Mentorship",
+    hint: "What to send, how applying works, and what happens after we read it.",
+  },
+  "/mentorship": {
+    prompt: "Already know this material?",
+    to: "/get-involved",
+    label: "Get involved",
+    hint: "Mentor a student, give a talk, or bring us into your school or company.",
+  },
+  "/get-involved": {
+    prompt: "Ready to say hello?",
+    to: "/contact",
+    label: "Contact",
+    hint: "Discord for applications and questions, LinkedIn for anything formal.",
+  },
+  "/contact": {
+    tone: "paper",
+    prompt: "Only just found us?",
+    to: "/",
+    label: "Start at the beginning",
+    hint: "What Fulcrum is, who it is for, and why any of it is free.",
+  },
+};
+
 export const nav = [
   { label: "About", to: "/about" },
   { label: "Programs", to: "/programs" },
