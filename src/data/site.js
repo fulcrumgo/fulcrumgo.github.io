@@ -34,18 +34,26 @@ export const org = {
 /* --------------------------------------------------------------------------
    Contact.
 
-   Deliberately no email address anywhere. Every mailbox Fulcrum had lived on
-   a domain that is being given up, so the site routes contact through
-   channels the organisation actually controls: Discord for applications and
-   day-to-day conversation, LinkedIn for formal or institutional enquiries.
-   If a mailbox exists again later, add it here and reintroduce it in one
-   place rather than scattering mailto: links back through the pages.
+   The site routes contact through channels the organisation actually
+   controls: Discord for applications and day-to-day conversation, LinkedIn
+   for formal or institutional enquiries. Every old fcrum.org mailbox died
+   with the domain, so nothing on the site may reference one.
+
+   `email` appears in exactly ONE place, the details card in the right-hand
+   column of the Contact page, and it is rendered as plain text rather than
+   a mailto: link. Both are deliberate: it is a fallback for people who need
+   a written record, not a channel to advertise, and mailto: hrefs are the
+   first thing address harvesters scrape. Do not add it to the footer, the
+   nav, the decks, or the JSON-LD, and do not turn it into a link.
    -------------------------------------------------------------------------- */
 export const contact = {
   linkedin: "https://www.linkedin.com/company/gofulcrum/",
   instagram: "https://www.instagram.com/gofulcrum/",
   discord: "https://discord.gg/gbQCGkupdJ",
   discordQr: asset("/images/OurFooter/QR.png"),
+
+  /* Read the note above before using this anywhere else. One place only. */
+  email: "fulcrumofficial@gmail.com",
 
   /* Human-readable labels, so pages describe the route consistently. */
   applyLabel: "Apply on Discord",

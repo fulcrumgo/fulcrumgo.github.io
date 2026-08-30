@@ -66,11 +66,15 @@ is used anywhere on the site.
 - Mentor, speak, or partner: **[LinkedIn](https://www.linkedin.com/company/gofulcrum/)**
 - Follow along: **[Instagram](https://www.instagram.com/gofulcrum/)**
 
-> **No email addresses anywhere.** Every Fulcrum mailbox lived on a domain the
-> organisation is giving up, so all contact routes through Discord and
-> LinkedIn instead. If a mailbox exists again later, add it to `contact` in
-> `src/data/site.js`, one place, rather than scattering `mailto:` links back
-> through the pages.
+> **One email address, in one place.** Contact routes through Discord and
+> LinkedIn; every old `fcrum.org` mailbox died with the domain and must not
+> be referenced anywhere. The one address the site carries lives in `contact`
+> in `src/data/site.js` and is rendered in exactly one location, the details
+> card on the Contact page, as plain text rather than a `mailto:` link. That
+> is deliberate on both counts: it is a fallback for enquiries that need a
+> written record rather than a channel being advertised, and `mailto:` hrefs
+> are what address harvesters scrape first. Do not add it to the footer, the
+> nav, the decks, or the JSON-LD, and do not make it a link.
 
 ---
 

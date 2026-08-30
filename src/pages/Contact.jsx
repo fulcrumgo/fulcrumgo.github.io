@@ -105,6 +105,15 @@ export default function Contact() {
                       {org.location}
                     </dd>
                   </div>
+                  {/* The only email address on the site. Deliberately plain
+                      text rather than a mailto: link: harvesters look for
+                      mailto: hrefs first, and a quiet line of text reads as
+                      a detail rather than a call to action. Discord and
+                      LinkedIn stay the routes we point people to. */}
+                  <div>
+                    <dt className="text-ink-faint">Written enquiries</dt>
+                    <dd className="mt-0.5 break-all">{contact.email}</dd>
+                  </div>
                 </dl>
               </div>
 
